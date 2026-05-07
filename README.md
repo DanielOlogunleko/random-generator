@@ -7,7 +7,8 @@ Your random generator page can be of anything:
 - A random motivational quote
 - A random number between 1-100
 - A magic 8-ball that returns a random answer
-- A fortune cookie that returns a random fortune
+- A fortune cookie that returns a random fortune - https://random-generator-ejd7.onrender.com
+
 
 **Requirements**
 
