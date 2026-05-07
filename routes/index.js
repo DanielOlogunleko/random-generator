@@ -1,14 +1,23 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/', function (req, res, next) {
-    // 1. Read the data.json file
-    // 2. Pick a random item from the data.json list
-    // 3. Render the index.hbs template with the random item.
+const fortunes = require('../data/data.json');
 
-    res.render('index', {
-        // your variables go here
-    });
+/* GET home page. */
+router.get('/', function(req, res, next) {
+
+  // generate random number
+  const randomIndex = Math.floor(Math.random() * fortunes.length);
+
+  // select random fortune
+  const randomFortune = fortunes[randomIndex];
+
+  // render page
+  res.render('index', {
+    title: 'Fortune Cookie Generator',
+    fortune: randomFortune.fortune
+  });
+
 });
 
 module.exports = router;
